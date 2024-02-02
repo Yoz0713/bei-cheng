@@ -2280,6 +2280,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 5;
   width: 59.5427083333vw;
   margin: 0 auto;
 }
