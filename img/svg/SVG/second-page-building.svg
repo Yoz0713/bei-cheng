@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2131.26 561.56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_22);
+        filter: url(#outer-glow-1);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_22" data-name="未命名漸層 22" x1="100.93" y1="605.21" x2="2151.48" y2="158.14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8a642e" stop-opacity="0"/>
+      <stop offset=".43" stop-color="#c57a13"/>
+      <stop offset=".49" stop-color="#f9eec9"/>
+      <stop offset=".57" stop-color="#c57a13"/>
+      <stop offset=".93" stop-color="#8a642e" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="5.79"/>
+      <feFlood flood-color="#fff" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <path class="cls-1" d="M1156.43,458.16c-1.68-.14-3.04-1.72-3.04-3.52l-.63-120.78V184.01c0-5.6-4.16-10.13-9.3-10.13h-6.57V19.47c0-5.6-4.16-10.13-9.3-10.13h-28.53c-.37-5.22-4.37-9.34-9.26-9.34h-42.2c-5.14,0-9.3,4.54-9.3,10.13V173.88h-13.76c-5.14,0-9.3,4.54-9.3,10.13v149.86l-.54,108.93c0,1.8-1.36,3.14-3.04,3L3.58,342.61c-1.92-.16-3.57,1.42-3.58,3.44v2.42s1016.37,103.9,1016.37,103.9c5.18,.44,9.38-3.7,9.39-9.25l.44-109.24V178.46c0-1.81,1.35-3.29,3.01-3.29h9.09l-.34,264.11c0,8.21,6.26,15.46,13.92,16.12l15.43,1.32,13.26,1.13,1.98,.17,13.61,1.16,24.12,2.06h0s.02,0,.03,0l31.39,2.68,979.54,97.64v-6.16l-974.83-97.24Zm-30.48-444.25V173.88h-26.84V10.63h23.82c1.67,0,3.01,1.47,3.01,3.29Zm-73.89,435.33c-1.68-.14-3.04-1.72-3.04-3.52l.25-441.15c0-1.81,1.35-3.29,3.01-3.29h10.61c-2.84,1.73-4.76,5.04-4.76,8.84l-.17,430.85c0,3.77,1.93,7.21,4.79,9.18l-10.7-.91Zm15.57,1.33c-1.68-.14-3.04-1.72-3.04-3.52l.12-442.48c0-1.81,1.35-3.29,3.01-3.29h17.42c1.67,0,3.01,1.47,3.01,3.29V192.23c0,1.81-1.35,3.29-3.02,3.29h-3.31v.04h-1.25c-5.14,0-9.3,4.54-9.3,10.13l-.06,236.43c0,3.77,1.93,7.21,4.79,9.18l-8.4-.72Zm28.56,2.44l-10.88-.93c-1.68-.14-3.04-1.72-3.04-3.52l-.03-248.44c0-1.81,1.35-3.29,3.01-3.29h22.42c1.67,0,3.01,1.47,3.01,3.29v155.41l.27,89.97c0,3.77,1.93,7.21,4.79,9.18l-19.57-1.67Zm28.86,2.46c-1.68-.14-3.04-1.72-3.04-3.52l-.36-96.42V205.69c0-5.6-4.16-10.13-9.3-10.13h-18.05c2.87-1.73,4.81-5.05,4.81-8.88v-11.51h39.69c1.67,0,3.01,1.47,3.01,3.29v155.41l.54,114.32c0,3.77,1.93,7.21,4.79,9.18l-22.11-1.89Z"/>
+  </g>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.16 12.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_228);
+      }
+
+      .cls-2 {
+        fill: url(#_未命名漸層_4);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_4" data-name="未命名漸層 4" x1="6.36" y1="6.36" x2="473.16" y2="6.36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ad9d7a"/>
+      <stop offset=".18" stop-color="#c1b590"/>
+      <stop offset=".55" stop-color="#f5f2ca"/>
+      <stop offset=".84" stop-color="#d0b890"/>
+      <stop offset="1" stop-color="#c09f77"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_228" data-name="未命名漸層 228" x1="1.23" y1="8.87" x2="11.48" y2="3.84" gradientTransform="translate(-2.63 6.36) rotate(-45)" gradientUnits="userSpaceOnUse">
+      <stop offset="1" stop-color="#a68050"/>
+      <stop offset="1" stop-color="#b59861"/>
+      <stop offset="1" stop-color="#d1c27f"/>
+    </linearGradient>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <polygon class="cls-2" points="6.36 5.36 473.16 6.36 6.36 7.36 6.36 5.36"/>
+      <rect class="cls-1" x="1.86" y="1.86" width="8.99" height="8.99" transform="translate(6.36 -2.63) rotate(45)"/>
+    </g>
+  </g>
+</svg>

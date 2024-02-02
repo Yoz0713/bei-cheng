@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 823.63 1876.58">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#_未命名漸層_30);
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        stroke: url(#_未命名漸層_30-2);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_30" data-name="未命名漸層 30" x1="-342.36" y1="59.03" x2="1579.19" y2="59.03" gradientTransform="translate(671.95 -44.8) rotate(175.31) scale(.43 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#806732"/>
+      <stop offset=".07" stop-color="#846c37"/>
+      <stop offset=".17" stop-color="#907a47"/>
+      <stop offset=".27" stop-color="#a49261"/>
+      <stop offset=".38" stop-color="#c0b386"/>
+      <stop offset=".5" stop-color="#e4deb4"/>
+      <stop offset=".55" stop-color="#f5f2ca"/>
+      <stop offset=".63" stop-color="#e1d3a8"/>
+      <stop offset=".73" stop-color="#ceb589"/>
+      <stop offset=".83" stop-color="#c0a073"/>
+      <stop offset=".92" stop-color="#b89465"/>
+      <stop offset="1" stop-color="#b69061"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_30-2" data-name="未命名漸層 30" x1="1.07" y1="1858.01" x2="1922.62" y2="1858.01" xlink:href="#_未命名漸層_30"/>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <line class="cls-1" x1="823.47" y1="1.99" x2=".16" y2="69.56"/>
+      <line class="cls-2" x1="823.47" y1="1807.01" x2=".16" y2="1874.58"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.68 500.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_58-8);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        mix-blend-mode: screen;
+      }
+
+      .cls-2 {
+        fill: url(#_未命名漸層_58-6);
+      }
+
+      .cls-10 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre_43);
+      }
+
+      .cls-4 {
+        fill: url(#_未命名漸層_58-5);
+      }
+
+      .cls-5 {
+        fill: url(#_未命名漸層_58-2);
+      }
+
+      .cls-6 {
+        fill: url(#_未命名漸層_58-4);
+      }
+
+      .cls-7 {
+        fill: url(#_未命名漸層_58-3);
+      }
+
+      .cls-8 {
+        fill: url(#_未命名漸層_58-7);
+      }
+
+      .cls-9 {
+        fill: url(#_未命名漸層_58);
+      }
+    </style>
+    <radialGradient id="_未命名漸層_58" data-name="未命名漸層 58" cx="-2839.21" cy="-74391.44" fx="-2839.21" fy="-74391.44" r="368.31" gradientTransform="translate(-6215.72 1623.25) rotate(90) scale(.48 .09)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffc561"/>
+      <stop offset=".07" stop-color="#d3a350" stop-opacity=".83"/>
+      <stop offset=".16" stop-color="#a27d3d" stop-opacity=".64"/>
+      <stop offset=".26" stop-color="#765b2d" stop-opacity=".47"/>
+      <stop offset=".36" stop-color="#513f1f" stop-opacity=".32"/>
+      <stop offset=".47" stop-color="#342813" stop-opacity=".2"/>
+      <stop offset=".58" stop-color="#1d160b" stop-opacity=".11"/>
+      <stop offset=".7" stop-color="#0c0904" stop-opacity=".05"/>
+      <stop offset=".83" stop-color="#030201" stop-opacity=".01"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_未命名漸層_58-2" data-name="未命名漸層 58" cx="-4604.94" cy="-74391.44" fx="-4604.94" fy="-74391.44" r="368.31" gradientTransform="translate(-6215.72 1910.79) rotate(90) scale(.36 .09)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="_未命名漸層_58-3" data-name="未命名漸層 58" cx="-52660.39" cy="-72915.53" fx="-52660.39" fy="-72915.53" r="3592.13" gradientTransform="translate(-6203.98 5137.1) rotate(90) scale(.09)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="Degradado_sin_nombre_43" data-name="Degradado sin nombre 43" cx="-52660.39" cy="-72915.53" fx="-52660.39" fy="-72915.53" r="881.64" gradientTransform="translate(-6203.98 5137.1) rotate(90) scale(.09)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff15b"/>
+      <stop offset=".07" stop-color="#d3c74b" stop-opacity=".83"/>
+      <stop offset=".16" stop-color="#a29939" stop-opacity=".64"/>
+      <stop offset=".26" stop-color="#76702a" stop-opacity=".47"/>
+      <stop offset=".36" stop-color="#514d1d" stop-opacity=".32"/>
+      <stop offset=".47" stop-color="#343112" stop-opacity=".2"/>
+      <stop offset=".58" stop-color="#1d1b0a" stop-opacity=".11"/>
+      <stop offset=".7" stop-color="#0c0c04" stop-opacity=".05"/>
+      <stop offset=".83" stop-color="#030201" stop-opacity=".01"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_未命名漸層_58-4" data-name="未命名漸層 58" cx="2869210.78" cy="-59753.61" fx="2869210.78" fy="-59753.61" r="3597.47" gradientTransform="translate(1546.88 8750.83) rotate(59.37) scale(0 .05) skewY(-.01)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="_未命名漸層_58-5" data-name="未命名漸層 58" cx="792996.31" cy="-68499.22" fx="792996.31" fy="-68499.22" r="3579.59" gradientTransform="translate(1475.97 8275.39) rotate(-150.66) scale(0 -.09)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="_未命名漸層_58-6" data-name="未命名漸層 58" cx="-311507.19" cy="-156139" fx="-311507.19" fy="-156139" r="3597.47" gradientTransform="translate(1220.73 8567.47) rotate(-.68) scale(0 .05) skewY(-.01)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="_未命名漸層_58-7" data-name="未命名漸層 58" cx="1306354.38" cy="159136.59" fx="1306354.38" fy="159136.59" r="3597.47" gradientTransform="translate(1452.27 9393.63) rotate(210.63) scale(0 .05) skewY(-.01)" xlink:href="#_未命名漸層_58"/>
+    <radialGradient id="_未命名漸層_58-8" data-name="未命名漸層 58" cx="-3179102.48" cy="23213.66" fx="-3179102.48" fy="23213.66" r="3597.47" gradientTransform="translate(1635.63 9067.48) rotate(89.32) scale(0 .05) skewY(-.01)" xlink:href="#_未命名漸層_58"/>
+  </defs>
+  <g class="cls-10">
+    <g id="_圖層_2" data-name="圖層 2">
+      <g id="_圖層_1-2" data-name="圖層 1">
+        <g>
+          <ellipse class="cls-9" cx="256.34" cy="250.21" rx="24.9" ry="138.39" transform="translate(-87.39 351.04) rotate(-60.66)"/>
+          <ellipse class="cls-5" cx="256.34" cy="250.21" rx="24.9" ry="103.2" transform="translate(-87.39 351.04) rotate(-60.66)"/>
+          <ellipse class="cls-7" cx="256.34" cy="250.21" rx="247.29" ry="259.06" transform="translate(-87.39 351.04) rotate(-60.66)"/>
+          <ellipse class="cls-3" cx="256.34" cy="250.21" rx="60.69" ry="63.58" transform="translate(-87.39 351.04) rotate(-60.66)"/>
+          <path class="cls-6" d="M252.37,243.53c-70.82,41.97-126.45,78.99-124.26,82.69,2.19,3.69,61.37-27.34,132.19-69.31,70.82-41.97,126.45-78.99,124.26-82.69-2.19-3.69-61.37,27.34-132.19,69.31Z"/>
+          <path class="cls-4" d="M241.12,241.66c-70.58,125.55-120.99,231.16-112.58,235.89,8.4,4.72,72.44-93.23,143.02-218.78,70.58-125.55,120.99-231.16,112.58-235.89-8.4-4.72-72.44,93.23-143.02,218.78Z"/>
+          <path class="cls-2" d="M264.11,250.12c.94,82.32-1.77,149.08-6.07,149.13-4.29,.05-8.54-66.64-9.48-148.96-.94-82.32,1.77-149.09,6.07-149.13,4.29-.05,8.54,66.64,9.48,148.96Z"/>
+          <path class="cls-8" d="M263.02,246.25c-41.97-70.82-78.99-126.45-82.69-124.26-3.69,2.19,27.34,61.37,69.31,132.19,41.97,70.82,78.99,126.45,82.69,124.26,3.69-2.19-27.34-61.37-69.31-132.19Z"/>
+          <path class="cls-1" d="M256.43,257.98c-82.32,.94-149.08-1.77-149.13-6.07-.05-4.29,66.64-8.54,148.96-9.48,82.32-.94,149.08,1.77,149.13,6.07,.05,4.29-66.64,8.54-148.96,9.48Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
