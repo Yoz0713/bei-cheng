@@ -174,6 +174,7 @@
         .first-page-content4{
             width: pxConvertor(245.647);
             height: pxConvertor(54.4379);
+            cursor: pointer;
             @include tablet{
                 width: pxConvertor2(245.647);
                 height: pxConvertor2(54.4379);
@@ -186,8 +187,9 @@
                 align-items: center;
                 justify-content: space-between;
                 position: relative;
-                
+                cursor: pointer;
                 .booking{
+                    pointer-events: none;
                     width: pxConvertor(136.787);
                     height: auto;
                     @include tablet{
@@ -196,6 +198,7 @@
                 }
                 .line{
                     width: 100%;
+                    cursor: pointer;
                 }
                 
                 
@@ -510,7 +513,7 @@
             margin-bottom: 6vw;
             @include tablet{
                 margin-bottom: 0;
-                margin-top: 22vw;
+                margin-top: 25vw;
             }
             .imgBox1{
                 position: relative;
@@ -519,6 +522,7 @@
                 align-self: flex-end;
                 margin-bottom: -4vw;
                 margin-right: 3vw;;
+                overflow: hidden;
                 img{
                     width: 100%;
                     height: 100%;
@@ -530,6 +534,7 @@
                 width: pxConvertor(355.561);
                 height: pxConvertor(536.818);
                 margin-top: -3vw;
+                overflow: hidden;
                 img{
                     width: 100%;
                     height: 100%;
@@ -555,6 +560,7 @@
             }
         }
         .right{
+            overflow: hidden;
             .paraStyle{
                 .box{
                     @include tablet{
@@ -603,6 +609,7 @@
                 border: 2px solid #C5B693;
                 border-radius: 50%;
                 transition: background-color 0.3s;
+                clip-path:polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
                 cursor: pointer;
                 @include tablet{
                     width: pxConvertor2(138.2883);
@@ -673,7 +680,7 @@
                         .swiper{
                             width: pxConvertor(717.7);
                             height: pxConvertor(480);
-                            margin: 3.5vw 0;
+                            margin: 3vw 0;
                             padding-bottom: 4vw;
                             @include tablet{
                                 position: absolute;
@@ -690,6 +697,7 @@
                                     width:100%;
                                     height: 100%;
                                     justify-content: space-between;
+                                    overflow: hidden;
                                     .imgBox{
                                         position: relative;
                                         width:100%;
@@ -710,6 +718,7 @@
                                             position: relative;
                                             width: pxConvertor(238.493);
                                             height: pxConvertor(382.445);
+                                            overflow: hidden;
                                             img{
                                                 width: 100%;
                                                 height: 100%;
@@ -743,15 +752,15 @@
                         }
                         .swiper-inner2{
                             width: pxConvertor(750);
-                            height: pxConvertor(520);
-                            margin: 0;
-                            padding-bottom: 6vw;
+                            height: pxConvertor(550);
+                            margin-top: 0;
                             @include tablet{
                                 width: 100%;
                                 height: pxConvertor2(331.45);
                                 padding-bottom: 0;
                                 margin-top: 3.5vw;
                             }
+                           
                         }
                         .swiper-inner4{
                             width: pxConvertor(620);
@@ -794,6 +803,7 @@
     }
     .forth-page-left{
         position: relative;
+        overflow: hidden;
         @include tablet{
             left: 0;
             right: 0;
@@ -851,6 +861,7 @@
                     align-items: center;
                     width: 25%;
                     margin-bottom: 1.5vw;
+                    overflow: hidden;
                     @include tablet{
                         width: 33.333%;
                     }
@@ -910,6 +921,7 @@
         }
     }
     .fifth-page-right{
+        clip-path: circle(200% at 100% 100%);
         img{
             width: pxConvertor(1137.79);
             height: auto;
@@ -1098,7 +1110,7 @@
                 padding: 0;
             }
             h2{
-                span{
+                & > :nth-child(7){
                     margin-left: 7vw;
                     @include tablet{
                         margin: 0;

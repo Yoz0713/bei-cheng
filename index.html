@@ -540,7 +540,7 @@
         </div>
         <div class="seventh-page-right">
             <div class="paraStyle">
-                <h2 class="font_comorant">GUARD<br class="computer"><span>FOR LIFE</span></h2>
+                <h2 class="font_comorant">GUARD<br class="computer" ><span>FOR LIFE</span></h2>
             </div>
             <div class="imgBox">
                 <img src="./img/webp/seventh-page-right-bg.png" class="bg">
@@ -685,6 +685,7 @@
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
     <script>
         window.onload=()=>{
@@ -808,8 +809,19 @@
             });
         }
         swiperOuterSwitcher()
-        function splitText(wrap) {
 
+        function bookingScroll(){
+            const button = document.querySelector("#first-page .bookingBox")
+            const ninthPage = document.querySelector("#ninth-page")
+            button.addEventListener("click",()=>{
+                ninthPage.scrollIntoView({ behavior: 'smooth' }); 
+            })
+          
+        }
+        
+        bookingScroll()
+
+        function splitText(wrap) {
             wrap = document.querySelectorAll(`${wrap}`);
             wrap.forEach((item, i) => {
                 text = item.innerText
@@ -841,7 +853,202 @@
 
                 item.innerHTML = finalStr.join("<br/>");
             })
-}
+            }
+            splitText(".paraStyle h2")
+            //animation area
+            function thirdPageAnimation(){
+                let ggTop1 =gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#third-page",
+                        start:"top 40%",
+                    }
+                })
+                ggTop1.from("#third-page .third-page-top .left img",{
+                    opacity:0,
+                    y:"15%",
+                    duration:1.2,
+
+                }).from("#third-page .third-page-top .span-left",{
+                    duration:1,
+                    stagger:0.3,
+                    clipPath:"polygon(100% 0 , 100% 0 , 100% 100% , 100% 100%)"
+                },"<+0.5").from(".third-page-top .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-top .paraStyle h4",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-top .paraStyle h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-top .paraStyle .box img",{
+                    transform:"scaleX(0)",
+                    duration:1.35
+                },"<+0.3")
+
+                let ggTop2 = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#third-page",
+                        start:"top 40%",
+                        scrub:2,
+                        end:`+=${document.querySelector("#third-page").clientHeight/2.25}px`
+                    }
+                })
+                ggTop2.from("#third-page .third-page-top .left img",{
+                    scale:1.8
+                })
+
+                let ggBottom1 = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:".third-page-bottom",
+                        start:"top 40%",
+                    }
+                })
+                ggBottom1.from(".third-page-bottom .left .box",{
+                    opacity:0,
+                    y:"60%",
+                    duration:1,
+                    stagger:0.3
+                }).from(".third-page-bottom .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-bottom .paraStyle h4",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-bottom .paraStyle h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".third-page-bottom .paraStyle .box img",{
+                    transform:"scaleX(0)",
+                    duration:1.35
+                },"<+0.3").from(".third-page-bottom .outer-slide .swiper",{
+                    opacity:0,
+                    y:"10%",
+                    duration:1.5
+                },"<+0.3")
+                
+                let ggBottom2 = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:".third-page-bottom",
+                        start:"top 40%",
+                        scrub:2,
+                        end:`+=${document.querySelector(".third-page-bottom").clientHeight/1.5}px`
+                    }
+                })
+                ggBottom2.from(".third-page-bottom .outer-slide .swiper-slide img",{
+                    scale:1.4
+                })
+            }
+            thirdPageAnimation()
+
+            function forthPageAnimation(){
+               let gg= gsap.timeline({
+                scrollTrigger:{
+                    trigger:"#forth-page",
+                    start:"top 40%"
+                }
+               })
+               gg.from(".forth-page-left",{
+                y:"22%",
+                opacity:0,
+                duration:1.5
+               }).from(".forth-page-right .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".forth-page-right .paraStyle h4",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".forth-page-right .paraStyle h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".forth-page-right .paraStyle .box img",{
+                    transform:"scaleX(0)",
+                    duration:1.35
+                },"<+0.3").from(".forth-page-right .insuranceBox .box img",{
+                    x:"150%",
+                    stagger:0.2,
+                    duration:0.8
+                },"<+0.3").from(".forth-page-right .insuranceBox .box p",{
+                    y:"150%",
+                    duration:1.2
+                },">-0.6")
+
+                let gg2 = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#forth-page",
+                        start:"top 40%",
+                        scrub:2,
+                        end:`+=${document.querySelector("#forth-page").clientHeight/2.25}px`
+                    }
+                })
+                gg2.from("#forth-page .forth-page-left img",{
+                    scale:1.8
+                })
+            }
+            forthPageAnimation()
+
+            function fifthPageAnimation(){
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#fifth-page",
+                        start:"top 40%"
+                    }
+                })
+                gg.from(".fifth-page-left .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".fifth-page-left .paraStyle h4",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35,
+                    stagger:0.3
+                },"<+0.3").from(".fifth-page-left .paraStyle h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".fifth-page-left .paraStyle .box img",{
+                    transform:"scaleX(0)",
+                    duration:1.35
+                },"<+0.3").from(".fifth-page-left .paraStyle > img",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.1").from(".fifth-page-right",{
+                    clipPath:"circle(0% at 100% 100%)",
+                    duration:3
+                },"<+0.1")
+            }
+            fifthPageAnimation()
+
+            function sixthPageAnimation(){
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#sixth-page",
+                        start:"top top",
+                        scrub:2,
+                        end:`+=${document.querySelector("#sixth-page").clientHeight/2.1}px`,
+                        pin:true
+                    }
+                })
+                gg.to(".sixth-page-left .paraStyle",{
+                    
+                })
+            }
+            sixthPageAnimation()
         }
 
     </script>
