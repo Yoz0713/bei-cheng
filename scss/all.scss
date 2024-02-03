@@ -689,6 +689,7 @@
                                 width: 100%;
                                 height: pxConvertor2(330.9);
                                 padding-bottom: 0;
+                                margin-top: 6.5vw;
                             }
                             .swiper-wrapper{
                                 width:100%;
@@ -843,6 +844,7 @@
             width: pxConvertor(426.339);
             margin-top: 2vw;
             margin-left:  -1vw;
+            overflow: hidden;
             @include tablet{
                 margin-left: 0;
                 position: absolute;
@@ -973,7 +975,7 @@
         }
       
         & >:nth-child(2){
-            margin-top: 7vw;
+            margin-top: 10vw;
             @include tablet{
                 margin-top: 18vw;
             }
@@ -1022,6 +1024,7 @@
     z-index: 3;
     width: 100%;
     padding: 10vw pxConvertor(231) 0;
+    
     @include tablet{
         flex-direction: column;
         padding: 13vw 0 0;
@@ -1056,6 +1059,7 @@
     .seventh-page-left{
         position: relative;
         z-index: 10;
+        overflow: hidden;
         @include tablet{
             display: flex;
             flex-direction: column;
@@ -1130,6 +1134,7 @@
                 width: pxConvertor2(520);
                 height:pxConvertor2(387.393);
             }
+            clip-path: circle(200% at 0 100%);
             .bg{
                 width: 100%;
                 height: 100%;
@@ -1182,6 +1187,7 @@
                 bottom: 0;
                 width: pxConvertor(373.363);
                 height: auto;
+                clip-path:polygon(0 0 , 100%  0 , 100% 100% , 0 100% );
                 @include tablet{
                     width: 28vw;
                     left: 1vw;
@@ -1208,8 +1214,7 @@
         padding-top: 8vw;
     }
     .eighth-page-bg{
-        display: flex;
-        flex-wrap: nowrap;
+      
         width: pxConvertor(1449.4);
         height: pxConvertor(626.286);
         overflow: hidden;
@@ -1220,14 +1225,21 @@
             left: 0;
             bottom: 0;
         }
-        img{
+        .imgBox{
+            display: flex;
+            flex-wrap: nowrap;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            @include tablet{
-                position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include tablet{
+                    position: relative;
+                }
             }
         }
+       
     }
  
     .paraBox{
@@ -1273,7 +1285,7 @@
             top: 0;
             bottom: 0;
             margin: auto 0;
-            width: 10%;
+            width: 100%;
             height: 3px;
             background-color: #F4D090;
         }
@@ -1518,7 +1530,7 @@
             left: 0;
             right: 0;
             margin: 0 auto;
-            bottom: 9vw;
+            bottom: 3vw;
             top: auto;
             flex-direction: column;
         }

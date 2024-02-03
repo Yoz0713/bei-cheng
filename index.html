@@ -568,9 +568,11 @@
     </section>
     <section id="eighth-page">
         <div class="eighth-page-bg">
-            <img src="./img/webp/eighth-page-bg1.webp">
-            <img src="./img/webp/eighth-page-bg2.webp">
-            <img src="./img/webp/eighth-page-bg3.webp">
+            <div class="imgBox">
+                <img src="./img/webp/eighth-page-bg1.webp">
+                <img src="./img/webp/eighth-page-bg2.webp">
+                <img src="./img/webp/eighth-page-bg3.webp">
+            </div>
         </div>
     
         <div class="paraBox">
@@ -977,11 +979,11 @@
                     transform:"scaleX(0)",
                     duration:1.35
                 },"<+0.3").from(".forth-page-right .insuranceBox .box img",{
-                    x:"150%",
-                    stagger:0.2,
-                    duration:0.8
+                    y:"180%",
+                    stagger:0.15,
+                    duration:0.6
                 },"<+0.3").from(".forth-page-right .insuranceBox .box p",{
-                    y:"150%",
+                    y:"165%",
                     duration:1.2
                 },">-0.6")
 
@@ -1003,7 +1005,7 @@
                 let gg = gsap.timeline({
                     scrollTrigger:{
                         trigger:"#fifth-page",
-                        start:"top 40%"
+                        start:"top 60%"
                     }
                 })
                 gg.from(".fifth-page-left .paraStyle h2 .blind",{
@@ -1011,7 +1013,7 @@
                     stagger:0.05,
                     opacity:0,
                     duration:1.35
-                },"<+0.3").from(".fifth-page-left .paraStyle h4",{
+                }).from(".fifth-page-left .paraStyle h4",{
                     x:"30%",
                     opacity:0,
                     duration:1.35,
@@ -1038,17 +1040,130 @@
                 let gg = gsap.timeline({
                     scrollTrigger:{
                         trigger:"#sixth-page",
-                        start:"top top",
+                        start:"center center",
                         scrub:2,
-                        end:`+=${document.querySelector("#sixth-page").clientHeight/2.1}px`,
+                        end:`+=${document.querySelector("#sixth-page").clientHeight*2.5}px`,
                         pin:true
                     }
                 })
                 gg.to(".sixth-page-left .paraStyle",{
-                    
-                })
+                    y:"-150%",
+                }).to(".sixth-page-right .bg",{
+                    x:window.innerWidth >= 820 ? "-50%" :"-100%",
+                    y:"6%"
+                },"<")
             }
             sixthPageAnimation()
+
+            function seventhPageAnimation(){
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#seventh-page",
+                        start:"top 40%",
+
+                    }
+                })
+
+                gg.from(".seventh-page-left .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".seventh-page-left .paraStyle h4",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35,
+                    stagger:0.3
+                },"<+0.3").from(".seventh-page-left .paraStyle h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".seventh-page-left .paraStyle .box img",{
+                    transform:"scaleX(0)",
+                    duration:1.35
+                },"<+0.3").from(".seventh-page-left > img",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35
+                },"<+0.1").from(".seventh-page-right .paraStyle h2 .blind",{
+                    x:"50%",
+                    stagger:0.05,
+                    opacity:0,
+                    duration:1.35
+                },"<+0.3").from(".seventh-page-right .imgBox",{
+                    clipPath:"circle(0% at 0 100%)",
+                    duration:1.4
+                },"<+0.3").from(".seventh-page-right .no1",{
+                    clipPath:"polygon(55% 0 , 55% 0 , 100% 45% , 100% 45%)",
+                    duration:0.8
+                },"<+0.5").from(".seventh-page-right .describe div",{
+                    opacity:0,
+                    x:"10%",
+                    duration:0.8,
+                    stagger:0.2
+                },"<+0.3")
+            }
+            seventhPageAnimation()
+
+            function eighthPageAnimation(){
+              
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#eighth-page",
+                        start:"center 45%",
+                        scrub:2,
+                        end:`+=${document.querySelector("#eighth-page").clientHeight*2}px`,
+                        pin:true
+                    }
+                })
+                gg.to(".eighth-page-bg .imgBox",{
+                    x:"-200%",
+                }).from(".eighth-page-progress .line",{
+                    width:"0%",
+                },"<")
+
+                  // 找到包裹 .eighth-page 的隨機 .pin-spacer
+                  const allPinSpacers = document.querySelectorAll('.pin-spacer');
+                let targetPinSpacer = null;
+
+                // 循環所有 .pin-spacer，找到包裹 .eighth-page 的那個
+                for (const pinSpacer of allPinSpacers) {
+                if (pinSpacer.querySelector('#eighth-page')) {
+                    targetPinSpacer = pinSpacer;
+                    break; // 找到了就跳出循環
+                }
+                }
+                targetPinSpacer.style.backgroundColor="#000"
+          
+       
+            }
+            eighthPageAnimation()
+
+            function ninthPageAnimation(){
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:"#ninth-page",
+                        start:"top 40%",
+                        
+                    }
+                })
+
+                gg.from(".ninth-page-center img",{
+                    opacity:0,
+                    y:"25px",
+                    duration:0.8
+                }).from(".ninth-page-center div",{
+                    opacity:0,
+                    y:"25px",
+                    duration:0.8,
+                    stagger:0.3
+                },"<+0.3").from(".ninth-page-rest",{
+                    opacity:0,
+                    y:"25px",
+                    duration:0.8,
+                },"<+0.3")
+            }
+            ninthPageAnimation()
         }
 
     </script>
