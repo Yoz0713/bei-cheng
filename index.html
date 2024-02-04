@@ -1161,12 +1161,13 @@
             fifthPageAnimation()
 
             function sixthPageAnimation(){
+                const ratio = window.innerWidth >=820 ? 2.5 : 1.5
                 let gg = gsap.timeline({
                     scrollTrigger:{
                         trigger:"#sixth-page",
                         start:"center center",
                         scrub:2,
-                        end:`+=${document.querySelector("#sixth-page").clientHeight*2.5}px`,
+                        end:`+=${document.querySelector("#sixth-page").clientHeight*ratio}px`,
                         pin:true
                     }
                 })
