@@ -15,7 +15,27 @@
                     <p class="font_micro">此前</p>
                     <p class="font_micro">稀有</p>
                 </div>
-                <img src="./img/svg/SVG/first-page-building.svg" class="building">
+                <div class="building">
+                    <svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 546.87 347.46">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: url(#_未命名漸層_2);
+                            }
+                          </style>
+                          <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="-6.86" y1="261.85" x2="531.7" y2="144.44" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#d59f54" stop-opacity="0"/>
+                            <stop offset=".31" stop-color="#d59f54"/>
+                            <stop offset=".54" stop-color="#f9eec9"/>
+                            <stop offset=".73" stop-color="#d59f54"/>
+                            <stop offset=".94" stop-color="#8a642e" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <g>
+                          <path  class="cls-1" d="M368.08,342.74h-33.79c-1.32,0-2.39-1.12-2.39-2.49V139.67c0-4.25-3.3-7.69-7.37-7.69h-5.21V14.78c0-4.25-3.3-7.69-7.37-7.69h-22.6c-.3-3.96-3.46-7.09-7.34-7.09h-33.43c-4.07,0-7.37,3.44-7.37,7.69v124.28h-10.9c-4.07,0-7.37,3.44-7.37,7.69v200.58c0,1.38-1.07,2.49-2.39,2.49H0v4.72H224.27c4.07,0,7.37-3.44,7.37-7.69V135.45c0-1.38,1.07-2.49,2.39-2.49h7.2v203.07c0,6.28,4.92,11.43,10.94,11.43h53.74s.02,0,.02,0h240.94v-4.72h-178.8ZM310.65,10.56v121.41h-21.26V8.07h18.87c1.32,0,2.39,1.12,2.39,2.49Zm-58.36,332.18c-1.32,0-2.39-1.12-2.39-2.49V3.48c0-1.38,1.07-2.49,2.39-2.49h8.41c-2.25,1.32-3.77,3.83-3.77,6.71V336.03c0,2.88,1.52,5.39,3.77,6.71h-8.41Zm12.23,0c-1.32,0-2.39-1.12-2.39-2.49V3.48c0-1.38,1.07-2.49,2.39-2.49h13.8c1.32,0,2.39,1.12,2.39,2.49V145.91c0,1.38-1.07,2.49-2.39,2.49h-2.62v.03h-.99c-4.07,0-7.37,3.44-7.37,7.69v179.91c0,2.88,1.52,5.39,3.77,6.71h-6.6Zm22.44,0h-8.55c-1.32,0-2.39-1.12-2.39-2.49V151.9c0-1.38,1.07-2.49,2.39-2.49h17.77c1.32,0,2.39,1.12,2.39,2.49v184.13c0,2.88,1.52,5.39,3.77,6.71h-15.38Zm22.67,0c-1.32,0-2.39-1.12-2.39-2.49V156.12c0-4.25-3.3-7.69-7.37-7.69h-14.3c2.27-1.31,3.81-3.83,3.81-6.74v-8.73h31.45c1.32,0,2.39,1.12,2.39,2.49v200.58c0,2.88,1.52,5.39,3.77,6.71h-17.37Z"/>
+                        </g>
+                      </svg>
+                </div>
                 <img src="./img/svg/SVG/first-page-goldline1.svg" class="goldline1">
                 <img src="./img/svg/SVG/first-page-goldline2.svg" class="goldline2">
                 <img src="./img/webp/first-page-shining.png" class="shining">
@@ -858,6 +878,110 @@
             }
             splitText(".paraStyle h2")
             //animation area
+            function firstPageAnimation(){
+                splitText(".first-page-content1 .paraBox p")
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                    trigger: "#first-page",
+                    start: "top center",
+                }
+                })
+                gg.from(".first-page-content .building .cls-1",{
+                    strokeDashoffset: 1800,
+                    duration:3
+                }).from(".first-page-content .building .cls-1",{
+                    fillOpacity:0,
+                    duration:1.6
+                },"<+1.2").from(".first-page-content .goldline1",{
+                    transform:"scaleX(0)",
+                    duration:1.5
+                },"<+0.4").from(".first-page-content .goldline2",{
+                    transform:"scaleX(0)",
+                    duration:1.5
+                },"<").from(".first-page-content .shining",{
+                    opacity:0,
+                    duration:0.8
+                },"<+0.2").from(".first-page-content1 .paraBox .blind",{
+                    opacity:0,
+                    x:"-25px",
+                    duration:1,
+                    stagger:"0.2"
+                },"<").from(".first-page-content2",{
+                    opacity:0,
+                    y:"25px",
+                    duration:1
+                },"<+0.25").from(".first-page-content3 > img",{
+                    opacity:0,
+                    y:"25px",
+                    duration:1,
+                },"<+0.25").from(".first-page-content3 > .logoBox",{
+                    opacity:0,
+                    y:"25px",
+                    duration:1,
+                },"<+0.25").from(".first-page-content4 .bookingBox",{
+                    transform:"scaleY(0)",
+                    duration:1,
+                },"<+0.25").from(".first-page-content4 .bookingBox .booking",{
+                    y:"180%",
+                    duration:1,
+                },"<+0.3")
+
+
+                let gg2 = gsap.timeline({
+                    scrollTrigger:{
+                    trigger: "#first-page",
+                    toggleActions: "restart pause resume pause",
+                    start: "center center",
+                    end: "bottom center",
+                    scrub: 1,
+                }
+                })
+                gg2.from(".first-page-bg .gold-line", {
+                    clipPath:"polygon(0px 99.5%, 50% 99.5%, 100% 99.5%, 100% 100%, 50% 100%, 0px 100%)",
+                }).to("#first-page", {
+                    clipPath:" polygon(50% 100%, 100% 75%, 100% 0, 0 0, 0 75%)",
+                },"<");
+            }
+            firstPageAnimation()
+            function secondPageAnimation(){
+                let gg = gsap.timeline({
+                    scrollTrigger:{
+                    trigger: "#second-page",
+                    start: "top 40%",
+                }
+                })
+                gg.from(".second-page-bg", {
+                    opacity:0,
+                    duration:2.5
+                }).from(".second-page-text img", {
+                    opacity:0,
+                    y:"25px",
+                    duration:0.8
+                },"<+1").from(".second-page-text h4", {
+                    opacity:0,
+                    y:"25px",
+                    duration:0.8
+                },"<+0.3").fromTo(
+                    ".second-page-building .building",
+                    {
+                    maskSize: "0%",
+                    },
+                    {
+                    maskSize: "300% 300%",
+                    duration: 5,
+                    },"<+0.3").from(".second-page-building .gold-line", {
+                    opacity:0,
+                    duration:1.2
+                },"<+0.5").from(".second-page-building .shining", {
+                    opacity:0,
+                    duration:1.2
+                },"<").from(".second-page-building .sign", {
+                    opacity:0,
+                    y:"25px",
+                    duration:1.2
+                },"<+0.8")
+            }
+            secondPageAnimation()
             function thirdPageAnimation(){
                 let ggTop1 =gsap.timeline({
                     scrollTrigger:{

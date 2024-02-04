@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     height: pxConvertor(1005);
-    clip-path: polygon(0 0 , 100% 0 , 100% 85% , 50% 100% , 0% 85% , 0 0);
+    clip-path:polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
     z-index: 2;
     @include tablet{
         height: pxConvertor2(1171.01);
@@ -28,7 +28,7 @@
             flex-direction: column;
             align-items: center;
             width: fit-content;
-            margin-bottom: pxConvertor(59);
+            margin-bottom: pxConvertor(36);
             .paraBox{
                 display: flex;
                 justify-content: space-between;
@@ -57,6 +57,20 @@
                 height: auto;
                 @include tablet{
                     width: pxConvertor2(674.590);
+                }
+                svg{
+                    width: 100%;
+                    height: auto;
+                    g{
+                        .cls-1{
+                            stroke-dasharray: 2000;
+                            stroke-dashoffset: 0;
+                            stroke: #C5B693 ;
+                            stroke-width: 2px;
+                            fill-opacity: 1;
+                        }
+                    }
+                  
                 }
             }
             .goldline1{
@@ -188,6 +202,7 @@
                 justify-content: space-between;
                 position: relative;
                 cursor: pointer;
+                overflow: hidden;
                 .booking{
                     pointer-events: none;
                     width: pxConvertor(136.787);
@@ -214,6 +229,7 @@
         height: 100%;
         overflow: hidden;
         z-index: 0;
+   
         img{
             width: 100%;
             height: 100%;
@@ -228,6 +244,16 @@
             mix-blend-mode: screen;
             object-fit: cover;
         }
+        .gold-line{
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, #e4deb5, #bc9a6c, #b69061);
+            clip-path: polygon(0px 74.5%, 50% 99.5%, 100% 74.5%, 100% 75%, 50% 100%, 0px 75%);
+        }
     }
     
 }
@@ -237,16 +263,18 @@
     z-index: 1;
     width: 100%;
     padding-top: 5.5vw;
+    
     @include tablet{
-        margin-top: -30vw;
+        margin-top: -45vw;
         overflow: hidden;
     }
     .second-page-bg{
         position: relative;
         z-index: 0;
         left: 0;
-        top: -15vw;
+        top: -19vw;
         width: 100%;
+        
         @include tablet{
       
             overflow: scroll;
@@ -267,6 +295,7 @@
             align-items: center;
             width: 100%;
             top: 31vw;
+         
             @include tablet{
                 top: 120vw;
                 pointer-events: none;
@@ -280,6 +309,13 @@
                 width: pxConvertor(1426.1);
                 margin-right:6.5vw;
                 margin-top: 6vw;
+                mix-blend-mode: screen;
+                -webkit-mask-image: radial-gradient( ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 100% );
+                mask-image: radial-gradient( ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 100% );
+                /* mask-image: url("img/img2023112911425536.webp"); */
+                -webkit-mask-size: 100%;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
                 @include tablet{
                     position: absolute;
                     margin: 0;
@@ -287,6 +323,7 @@
                     top: 10vw;
                     width: pxConvertor2(1426.1);
                 }
+               
             }
             .shining{
                 position: absolute;
@@ -343,7 +380,7 @@
         width: 100%;
         margin-bottom: 3vw;
         @include tablet{
-            top:40vw;
+            top:55vw;
             pointer-events: none;
         }
         img{
@@ -371,7 +408,7 @@
     }
     .second-page-hand{
         position: absolute;
-        top:74vw;
+        top:90vw;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -844,7 +881,6 @@
             width: pxConvertor(426.339);
             margin-top: 2vw;
             margin-left:  -1vw;
-            overflow: hidden;
             @include tablet{
                 margin-left: 0;
                 position: absolute;
@@ -963,7 +999,8 @@
         }
     }
     .sixth-page-left{
-        padding-top: 9.2vw;
+        padding-top: 7.2vw;
+        margin-top: 2vw;
         height: 35vw;
         overflow: hidden;
         @include tablet{
