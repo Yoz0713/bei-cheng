@@ -1,12 +1,24 @@
 @import "_config.scss";
 
-
+#landing-page{
+    width: 100%;
+    height: 51vw;
+    @include tablet{
+        height: 220vw;
+    }
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 #first-page{
     position: relative;
     width: 100%;
     height: pxConvertor(1005);
     clip-path:polygon(50% 100%, 100% 75%, 100% 0, 0 0, 0 75%);
     z-index: 2;
+ 
     @include tablet{
         height: pxConvertor2(1171.01);
         clip-path:polygon(50% 100%, 100% 87.5%, 100% 0, 0 0, 0 87.5%);
@@ -244,6 +256,7 @@
             height: 100%;
             mix-blend-mode: screen;
             object-fit: cover;
+            opacity: 0.5;
         }
         .gold-line{
             position: absolute;
@@ -279,7 +292,7 @@
         left: 0;
         top: -19vw;
         width: 100%;
-        
+        overflow: hidden;
         @include tablet{
       
             overflow: scroll;
@@ -540,7 +553,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 0.4;
             mix-blend-mode: screen;
             clip-path: polygon(0 9% , 100% 0 , 100% 91% , 0 100% );
             @include tablet{
@@ -892,6 +905,7 @@
     .forth-page-right{
         position: relative;
         padding-top: pxConvertor(133);
+        overflow: hidden;
         @include tablet{
             order: -1;
             left: 0;
@@ -991,13 +1005,28 @@
         }
     }
     .fifth-page-right{
+        position: relative;
         clip-path: circle(200% at 100% 100%);
-        img{
+        .boss{
             width: pxConvertor(1137.79);
             height: auto;
             clip-path: polygon(0 0 , 100% 0 , 100% 87% , 0 99% ,0 0 );
+            margin-top: 0.6vw;
             @include tablet{
                 width: 100%;
+            }
+        }
+        .boss-sign{
+            position: absolute;
+            width: pxConvertor(237);
+            height: auto;
+            right: 8vw;
+            bottom: 5vw;
+            z-index: 10;
+            @include tablet{
+                width: pxConvertor2(190.6);
+                right: 9.5vw;
+                bottom: 10vw;
             }
         }
     }
@@ -1014,6 +1043,7 @@
     padding-left: pxConvertor(285);
     margin-bottom: 7vw;
     margin-top: 3vw;
+    overflow: hidden;
     @include tablet{
         flex-direction: column;
         padding-left: 0;
@@ -1139,7 +1169,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 0.4;
             mix-blend-mode: screen;
             clip-path: polygon(0 13% , 100% 0 , 100% 87% , 0 100% );
             @include tablet{
@@ -1414,7 +1444,11 @@
         }
         img{
             width: 100%;
-            height: auto;
+            height: 45vw;
+            object-fit: cover;
+            @include tablet{
+                height: auto;
+            }
         }
         &::after,&::before{
             display: block;
@@ -1608,7 +1642,7 @@
                     input,textarea{
                         width: 100%;
                         height: 100%;
-                        border: 2px solid #3C3C3C;
+                        border: 1px solid #3C3C3C;
                         padding: 0 20px;
                         font-size: pxConvertor(15);
                             color: #3C3C3C;

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
+    <section id="landing-page">
+        <video  autoplay="" class="video-firstpage" loop="" muted="" playsinline="" src="./video/landing-video3.mp4">&nbsp;</video>
+
+    </section>
     <section id="first-page">
         <div class="first-page-content">
             <div class="first-page-content1">
@@ -498,7 +502,8 @@
             </div>
         </div>
         <div class="fifth-page-right">
-            <img src="./img/webp/fifth-page-right-bg.png">
+            <img src="./img/webp/fifth-page-right-bg.png" class="boss">
+            <img src="./img/svg/SVG/boss-sign.svg" class="boss-sign">
         </div>
       
     </section>
@@ -663,9 +668,9 @@
                         </g>
                       </svg>
                 </div>
-               <div class="shiningBox">
+               <!-- <div class="shiningBox">
                 <img src="./img/webp/first-page-shining.png" class="shining">
-               </div>
+               </div> -->
                 <div class="ninth-page-logo">
                     <img src="./img/svg/SVG/ninth-page-beichen.svg">
                     <h1 class="font_noto">羅斯福</h1>
@@ -1004,6 +1009,19 @@
                     y:"25px",
                     duration:1.2
                 },"<+0.8")
+
+                let gg2 = gsap.timeline({
+                    scrollTrigger:{
+                    trigger: ".second-page-text",
+                    toggleActions: "restart pause restart reverse",
+                    start: "top center",
+                    end: "bottom top",
+                    }
+                })
+                gg2.from(".second-page-bg > img",{
+                    transform:"scale(1.1)",
+                    duration:1.2
+                })
             }
             secondPageAnimation()
             function thirdPageAnimation(){
@@ -1191,10 +1209,12 @@
                 })
                 gg.to(".sixth-page-left .paraStyle",{
                     y:window.innerWidth >= 820 ? "-150%" :"-130%",
+                    delay:0.2
                 }).to(".sixth-page-right .bg",{
-                    x:window.innerWidth >= 820 ? "-50%" :"-100%",
-                  
-                },"<")
+                    x:window.innerWidth >= 820 ? "-50.3%" :"-100%",
+                },"<").to(".sixth-page-right ",{
+                    duration:0.2
+                })
             }
             sixthPageAnimation()
 
@@ -1203,32 +1223,31 @@
                     scrollTrigger:{
                         trigger:"#seventh-page",
                         start:"top 40%",
-
+                        toggleActions: "play reverse play reverse",
                     }
                 })
 
-                gg.from(".seventh-page-left .paraStyle h2 .blind",{
-                    x:"50%",
-                    stagger:0.05,
+                gg.from(".seventh-page-left > img",{
+                    x:"30%",
                     opacity:0,
                     duration:1.35
-                },"<+0.3").from(".seventh-page-left .paraStyle h4",{
+                }).from(".seventh-page-left > :nth-child(2) h4",{
                     x:"30%",
                     opacity:0,
                     duration:1.35,
-                    stagger:0.3
-                },"<+0.3").from(".seventh-page-left .paraStyle h6",{
+                },"<+0.3").from(".seventh-page-left > :nth-child(2) h6",{
                     x:"30%",
                     opacity:0,
-                    duration:1.35
-                },"<+0.3").from(".seventh-page-left .paraStyle .box img",{
-                    transform:"scaleX(0)",
-                    duration:1.35
-                },"<+0.3").from(".seventh-page-left > img",{
+                    duration:1.35,
+                },"<").from(".seventh-page-left > :nth-child(3) h4",{
                     x:"30%",
                     opacity:0,
-                    duration:1.35
-                },"<+0.1").from(".seventh-page-right .paraStyle h2 .blind",{
+                    duration:1.35,
+                },"<+0.3").from(".seventh-page-left > :nth-child(3) h6",{
+                    x:"30%",
+                    opacity:0,
+                    duration:1.35,
+                },"<").from(".seventh-page-right .paraStyle h2 .blind",{
                     x:"50%",
                     stagger:0.05,
                     opacity:0,
