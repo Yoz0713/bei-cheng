@@ -5,10 +5,11 @@
     position: relative;
     width: 100%;
     height: pxConvertor(1005);
-    clip-path:polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
+    clip-path:polygon(50% 100%, 100% 75%, 100% 0, 0 0, 0 75%);
     z-index: 2;
     @include tablet{
         height: pxConvertor2(1171.01);
+        clip-path:polygon(50% 100%, 100% 87.5%, 100% 0, 0 0, 0 87.5%);
     }
     .first-page-content{
         position: relative;
@@ -252,7 +253,11 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(to left, #e4deb5, #bc9a6c, #b69061);
-            clip-path: polygon(0px 74.5%, 50% 99.5%, 100% 74.5%, 100% 75%, 50% 100%, 0px 75%);
+            clip-path: polygon(0px 74.7%, 50% 99.5%, 100% 74.7%, 100% 75%, 50% 100%, 0px 75%);
+            @include tablet{
+                clip-path: polygon(0px 87.2%, 50% 99.5%, 100% 87.2%, 100% 87.5%, 50% 100%, 0px 87.5%);
+  
+            }
         }
     }
     
@@ -506,6 +511,7 @@
     .third-page-bg{
         position: absolute;
         width: 100%;
+        overflow: hidden;
         @include tablet{
             position: relative;
             top: -10vw;
@@ -526,6 +532,20 @@
             left: 0;
             bottom:0;
             width: 100%;
+        }
+        video{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            mix-blend-mode: screen;
+            clip-path: polygon(0 9% , 100% 0 , 100% 91% , 0 100% );
+            @include tablet{
+                clip-path: polygon(0 2.7% , 100% 0 , 100% 97.3% , 0 100% );
+            }
         }
     }
     .third-page-top{
@@ -838,6 +858,19 @@
         img{
             width: 100%;
         }
+        .gold-line{
+            position: absolute;
+                top: 0;
+                z-index: 10;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to left, #e4deb5, #bc9a6c, #b69061);
+                clip-path: polygon(0px 99.8%, 0% 100%, 100% 93.3%, 100% 93.1%);
+            @include tablet{
+                clip-path: polygon(0px 99.9%, 0% 100%, 100% 98.7%, 100% 98.6%);
+            }
+        }
     }
     .forth-page-left{
         position: relative;
@@ -869,9 +902,8 @@
         .paraStyle{
             .box{
                 .font_noto{
-                    @include tablet{
-                        color: #8C713B;
-                    }
+                    color: #8C713B;
+                   
                 }
             }
            
@@ -969,46 +1001,54 @@
             }
         }
     }
+    
 }
 
 #sixth-page{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 3;
     width: 100%;
     padding-left: pxConvertor(285);
+    margin-bottom: 7vw;
+    margin-top: 3vw;
     @include tablet{
         flex-direction: column;
         padding-left: 0;
     }
-    .sixth-page-bg{
-        position: absolute;
-        left: 0;
-        top: -8vw;
-        width: 100%;
-        overflow: hidden;
-        @include tablet{
-            top: -10.7vw;
-        }
-        img{
-            width: 128.6%;
-           @include tablet{
-            width: 114.2%;
-           }
-        }
-    }
+    // .sixth-page-bg{
+    //     position: absolute;
+    //     left: 0;
+    //     top: -8vw;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     transform: scale(1.3);
+    //     @include tablet{
+    //         top: -10.7vw;
+    
+    //     }
+    //     img{
+    //         width: 128.6%;
+            
+    //        @include tablet{
+    //         width: 114.2%;
+    //        }
+    //     }
+    // }
     .sixth-page-left{
         padding-top: 7.2vw;
         margin-top: 2vw;
         height: 35vw;
         overflow: hidden;
         @include tablet{
-           height: 105vw;
+           height: 90vw;
            left: 0;
            right: 0;
            width: 87.5%;
            margin: 0 auto;
+           padding-top: 0;
         }
       
         & >:nth-child(2){
@@ -1023,14 +1063,14 @@
         right: 0;
         width: pxConvertor(680.489);
         overflow: hidden;
-        margin-top: -8.4vw;
+        margin-top: 0;
         padding-left: 0.1vw;
         @include tablet{
             display: flex;
             width: 87.5%;
             right: 0;
             left: 0;
-            margin: 0 auto;
+            margin: 0 auto 14vw;
             padding: 0;
             bottom: 0;
         }
@@ -1091,6 +1131,20 @@
             right: 0;
             bottom: 0;
             width: 100%;
+        }
+        video{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            mix-blend-mode: screen;
+            clip-path: polygon(0 13% , 100% 0 , 100% 87% , 0 100% );
+            @include tablet{
+                clip-path: polygon(0 2.7% , 100% 0 , 100% 97.3% , 0 100% );
+            }
         }
     }
     .seventh-page-left{
@@ -1421,10 +1475,42 @@
                 width: pxConvertor(239.942);
                 height: auto;
                 margin-bottom: 1vw;
+                transform: scaleY(0.9);
                 @include tablet{
                     width: pxConvertor2(242.843);
                 }
+                svg{
+                    width: 100%;
+                    height: auto;
+                    g{
+                        .cls-1{
+                            stroke-dasharray: 2000;
+                            stroke-dashoffset: 0;
+                            stroke: #C5B693 ;
+                            stroke-width: 2px;
+                            fill-opacity: 1;
+                        }
+                    }
+                  
+                }
             }
+            .shiningBox{
+                position: absolute;
+                width: 3.5vw;
+                left: 11.9vw;
+                top: 1.3vw;
+                mix-blend-mode: plus-lighter;
+                @include tablet{
+                    width: 6.5vw;
+                    left: 42.9vw;
+                    top: 3.8vw;
+                }
+                .shining{
+                    width: 100%;
+                    animation: shining 4s ease-in-out forwards infinite;
+                }
+            }
+         
             .ninth-page-logo{
                 position: relative;
                 display: flex;
