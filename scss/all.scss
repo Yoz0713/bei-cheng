@@ -905,7 +905,7 @@
     .forth-page-right{
         position: relative;
         padding-top: pxConvertor(133);
-        overflow: hidden;
+     
         @include tablet{
             order: -1;
             left: 0;
@@ -914,6 +914,9 @@
             margin: 0 auto 6vw;
         }
         .paraStyle{
+            @include tablet{
+                overflow: hidden;
+            }
             .box{
                 .font_noto{
                     color: #8C713B;
@@ -1014,6 +1017,7 @@
             margin-top: 0.6vw;
             @include tablet{
                 width: 100%;
+                margin-top: -1.2vw;
             }
         }
         .boss-sign{

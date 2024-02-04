@@ -1566,7 +1566,6 @@
 #forth-page .forth-page-right {
   position: relative;
   padding-top: 6.9270833333vw;
-  overflow: hidden;
 }
 @media all and (max-width: 820px) {
   #forth-page .forth-page-right {
@@ -1580,6 +1579,17 @@
     display: none;
   }
   #forth-page .forth-page-right .phone {
+    display: block;
+  }
+}
+@media all and (max-width: 820px) {
+  #forth-page .forth-page-right .paraStyle {
+    overflow: hidden;
+  }
+  #forth-page .forth-page-right .paraStyle .computer {
+    display: none;
+  }
+  #forth-page .forth-page-right .paraStyle .phone {
     display: block;
   }
 }
@@ -1741,6 +1751,7 @@
 @media all and (max-width: 820px) {
   #fifth-page .fifth-page-right .boss {
     width: 100%;
+    margin-top: -1.2vw;
   }
   #fifth-page .fifth-page-right .boss .computer {
     display: none;
