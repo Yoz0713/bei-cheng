@@ -915,10 +915,13 @@
                     start: "top center",
                 }
                 })
-                gg.from(".first-page-content .building .cls-1",{
+                gg.from(".first-page-content .building ",{
+                    opacity:0,
+                    duration:0.8
+                }).from(".first-page-content .building .cls-1",{
                     strokeDashoffset: 1800,
                     duration:3
-                }).from(".first-page-content .building .cls-1",{
+                },"<+0.1").from(".first-page-content .building .cls-1",{
                     fillOpacity:0,
                     duration:1.6
                 },"<+1.2").from(".first-page-content .goldline1",{
