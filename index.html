@@ -418,7 +418,7 @@
         <div class="forth-page-bg">
             <img src="./img/webp/forth-page-bg.png" class="computer">
             <img src="./img/webp/forth-page-bg-ph.png" class="phone">
-            <div class="gold-line"></div>
+            <!-- <div class="gold-line"></div> -->
         </div>
         <div class="forth-page-left">
             <img src="./img/webp/forth-page-left-bg.webp">
@@ -511,16 +511,6 @@
         
         <div class="sixth-page-left">
             <div class="paraStyle">
-                <h2 class="font_comorant">INHERITED<br>GENERATION</h2>
-                <div class="box">
-                    <h4 class="font_noto" style="color:#8C713B">締造時代經典的藏富地標</h4>
-                    <img src="./img/svg/SVG/para-style-line.svg">
-                    <h4 class="font_noto newText2">豪邸建築巨擘<br class="phone"><span class="computer">，</span>三門建築師事務所 白省三</h4>
-                </div>
-                <h6 class="font_micro" style="color: #2D2D2D; font-weight: 600;">比大師更有價值的是大師的思想，每一棟刻劃台北時代巔峰的建築，都來自於他的筆下，「北城.羅斯福」不但是一個地標，也將是一個偉大的建築。</h6>
-             
-            </div>
-            <div class="paraStyle">
                 <h2 class="font_comorant">STRUCTURALLY<br>SAFE</h2>
                 <div class="box">
                     <h4 class="font_noto" style="color:#8C713B">安全，是建築工藝的頂級藝術</h4>
@@ -529,6 +519,16 @@
                 </div>
                 <h6 class="font_micro" style="color: #2D2D2D; font-weight: 600;">從崗石精雕的地標氣勢，看到台灣匠心猶如日本職人文化的信念與力量，為「北城.羅斯福」耐震強度提升至6級，為新時代豪宅結構標竿。
                 </h6>
+            </div>
+            <div class="paraStyle">
+                <h2 class="font_comorant">INHERITED<br>GENERATION</h2>
+                <div class="box">
+                    <h4 class="font_noto" style="color:#8C713B">締造時代經典的藏富地標</h4>
+                    <img src="./img/svg/SVG/para-style-line.svg">
+                    <h4 class="font_noto newText2">豪邸建築巨擘<br class="phone"><span class="computer">，</span>三門建築師事務所 白省三</h4>
+                </div>
+                <h6 class="font_micro" style="color: #2D2D2D; font-weight: 600;">比大師更有價值的是大師的思想，每一棟刻劃台北時代巔峰的建築，都來自於他的筆下，「北城.羅斯福」不但是一個地標，也將是一個偉大的建築。</h6>
+             
             </div>
         </div>
         <div class="sixth-page-right">
@@ -1200,7 +1200,7 @@
             fifthPageAnimation()
 
             function sixthPageAnimation(){
-                const ratio = window.innerWidth >=820 ? 2.5 : 1.5
+                const ratio = window.innerWidth >=820 ? 2.5 : 3
                 let gg = gsap.timeline({
                     scrollTrigger:{
                         trigger:"#sixth-page",
@@ -1210,14 +1210,36 @@
                         pin:true
                     }
                 })
-                gg.to(".sixth-page-left .paraStyle",{
-                    y:window.innerWidth >= 820 ? "-150%" :"-130%",
+                if(window.innerWidth >= 820){
+                    gg.to(".sixth-page-left .paraStyle",{
+                    y:"-150%" ,
                     delay:0.2
                 }).to(".sixth-page-right .bg",{
-                    x:window.innerWidth >= 820 ? "-50.3%" :"-100%",
+                    x:"-50.3%",
                 },"<").to(".sixth-page-right ",{
                     duration:0.2
                 })
+                }else{
+                    gg.fromTo(".sixth-page-left",{
+                        y:"50%",
+                        opacity:0
+                    },{
+                        opacity:1,
+                        y:0,
+                        delay:0.2
+                    }).fromTo(".sixth-page-right",{
+                        x:"150%",
+                    },{
+                        x:0,
+                    },"<+0.3").to(".sixth-page-left .paraStyle",{
+                    y:"-110%" ,
+                    }).to(".sixth-page-right .bg",{
+                    x:"-100%",
+                },"<").to(".sixth-page-right ",{
+                    duration:0.2
+                })
+                }
+              
             }
             sixthPageAnimation()
 
@@ -1238,7 +1260,7 @@
                     x:"30%",
                     opacity:0,
                     duration:1.35,
-                },"<+0.3").from(".seventh-page-left > :nth-child(2) h6",{
+                },"<+0.4").from(".seventh-page-left > :nth-child(2) h6",{
                     x:"30%",
                     opacity:0,
                     duration:1.35,
@@ -1246,7 +1268,7 @@
                     x:"30%",
                     opacity:0,
                     duration:1.35,
-                },"<+0.3").from(".seventh-page-left > :nth-child(3) h6",{
+                },"<+0.4").from(".seventh-page-left > :nth-child(3) h6",{
                     x:"30%",
                     opacity:0,
                     duration:1.35,

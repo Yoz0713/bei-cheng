@@ -1746,7 +1746,7 @@
   height: auto;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 99%, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 87%, 0 99%, 0 0);
-  margin-top: 0.6vw;
+  margin-top: 0.1vw;
 }
 @media all and (max-width: 820px) {
   #fifth-page .fifth-page-right .boss {
