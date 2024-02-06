@@ -97,7 +97,7 @@
         }
         img{
             width: pxConvertor(473.16);
-            margin: 0.4vw 0 0 0.3vw;
+            margin: 0.4vw 0 0 0vw;
             transform-origin: left center;
             @include tablet(){
                 width: 100%;

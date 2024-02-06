@@ -1,8 +1,10 @@
 @import "_config.scss";
 
 #landing-page{
+    position: relative;
     width: 100%;
     height: 51vw;
+    background-color: #000;
     @include tablet{
         height: 150vw;
     }
@@ -10,6 +12,29 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    .play-btn{
+        position: absolute;
+        right: 2vw;
+        bottom: 5vw;
+        cursor: pointer;
+    
+        padding: 2vw;
+        @include tablet{
+            padding: 4.5vw;
+            bottom: 3vw;
+        }
+        img{
+            display: none;
+            width: 2vw;
+            pointer-events: none;
+            @include  tablet{
+                width: 7vw;
+            }
+        }
+        .active{
+            display: block;
+        }
     }
 }
 #first-page{
@@ -33,6 +58,7 @@
         z-index: 10;
         padding-top: pxConvertor(82.649);
         @include tablet{
+            overflow: hidden;
             padding-top: pxConvertor2(124);
         }
         .first-page-content1{
@@ -127,37 +153,11 @@
                 margin-bottom: pxConvertor2(77.24);
             }
             img{
-                width: pxConvertor(62.09);
+                width: 16.5vw;
                 height: auto;
                 margin-right: 5px;
                 @include tablet{
-                    width: pxConvertor2(67.8);
-                }
-            }
-            h1{
-                color: #fff;
-                font-size: 5vw;
-                margin-top: -1vw;
-                letter-spacing: 0.01em;
-                @include tablet{
-                    font-size: 12vw;
-                    font-weight: 300;
-                }
-            }
-            h6{
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -1vw;
-                margin: 0 auto;
-                color: #FBCE00;
-                font-size: 1.1vw;
-                font-weight: 300;
-                width: fit-content;
-                letter-spacing: 0.1em;
-                @include tablet{
-                    font-size: 2.8vw;
-                    bottom: -3vw;
+                    width:40vw;
                 }
             }
         }
@@ -848,16 +848,14 @@
 }
 
 #forth-page{
-    display: flex;
-    justify-content: space-between;
+   
     position: relative;
     width: 100%;
-    padding: 13vw pxConvertor(250) 0 pxConvertor(318) ;
+    
     @include tablet{
-        padding: 0;
-        margin-bottom: 120vw;
-        flex-direction: column;
-        align-items: center;
+        
+        
+    
         margin-top: -10vw;
     }
     .forth-page-bg{
@@ -865,6 +863,7 @@
         left: 0;
         top: 0;
         width: 100%;
+    
         @include tablet{
             top: -65.5vw;
         }
@@ -879,10 +878,22 @@
                 width: 100%;
                 height: 100%;
                 background: linear-gradient(to left, #e4deb5, #bc9a6c, #b69061);
-                clip-path: polygon(0px 99.8%, 0% 100%, 100% 93.3%, 100% 93.1%);
+                clip-path: polygon(0px 99.8%, 0% 100%, 100% 92.5%, 100% 92.3%);
             @include tablet{
-                clip-path: polygon(0px 99.9%, 0% 100%, 100% 98.7%, 100% 98.6%);
+                display: none;
+                // clip-path: polygon(0px 99.9%, 0% 100%, 100% 98.7%, 100% 98.6%);
             }
+        }
+    }
+    .forth-page-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 13vw pxConvertor(250) 0 pxConvertor(318) ;
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+        padding: 0;
+        margin-bottom: 120vw;
         }
     }
     .forth-page-left{
@@ -934,7 +945,7 @@
                 margin-left: 0;
                 position: absolute;
                 left: 0;
-                bottom: -255vw;
+                bottom: -265vw;
                 width: 100%;
             }
             div{
@@ -944,6 +955,7 @@
                 width: 100%;
                 .box{
                     display: flex;
+                    justify-content: flex-start ;
                     flex-direction: column;
                     align-items: center;
                     width: 25%;
@@ -951,6 +963,7 @@
                     overflow: hidden;
                     @include tablet{
                         width: 33.333%;
+                        margin-bottom: 4.5vw;
                     }
                     img{
                         width: pxConvertor(67.5447);
@@ -979,10 +992,12 @@
 #fifth-page{
     display: flex;
     position: relative;
-    width: 88.5%;
-    margin: 3.7vw 0 0 auto;
+    width: 100%;
+    margin: 3.1vw auto 0;
+    padding-left: 12vw;
     @include tablet{
         flex-direction: column;
+        padding: 0;
         overflow: hidden;
         width: 87.5%;
         margin: 0 auto;
@@ -1013,11 +1028,16 @@
         .boss{
             width: pxConvertor(1137.79);
             height: auto;
+<<<<<<< HEAD
             clip-path: polygon(0 0 , 100% 0 , 100% 87% , 0 99% ,0 0 );
             margin-top: 0.1vw;
+=======
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0 99%, 0 0);
+            margin-top: 0.6vw;
+>>>>>>> 00cd9bc9bdaef32bddacb0478d8a7ba55d0856e5
             @include tablet{
                 width: 100%;
-                margin-top: -1.2vw;
+                margin-top: -0.1vw;
             }
         }
         .boss-sign{
@@ -1135,11 +1155,12 @@
     z-index: 3;
     width: 100%;
     padding: 10vw pxConvertor(231) 0;
-    
+  
     @include tablet{
         flex-direction: column;
         padding: 13vw 0 0;
         height: pxConvertor2(1852.169);
+        background-color: #000;
     }
     .seventh-page-bg{
         position: absolute;
@@ -1163,8 +1184,11 @@
             position: absolute;
             z-index: 30;
             right: 0;
-            bottom: 0;
+            bottom: 0.2vw;
             width: 100%;
+            @include tablet{
+                display: none;
+            }
         }
         video{
             position: absolute;
@@ -1222,6 +1246,14 @@
                 .box{
                     @include tablet{
                         margin-top: 3vw;
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                h4{
+                    margin-left: -0.2vw;
+                    @include tablet{
+                        margin-left: 0;
                     }
                 }
             }
@@ -1554,44 +1586,19 @@
                 display: flex;
                 align-content: center;
                 justify-content: center;
-                margin-bottom: pxConvertor(32);
                 img{
-                    width: pxConvertor(62.09);
+                    width:18.2vw;
                     height: auto;
                     margin-right: 5px;
                     @include tablet{
-                        width: pxConvertor2(75.42);
-                    }
-                }
-                h1{
-                    color: #3C3C3C;
-                    font-size: pxConvertor(84);
-                    margin-top: -1vw;
-                    letter-spacing: 0.01em;
-                    @include tablet{
-                        font-size: pxConvertor2(111.77);
-                    }
-                }
-                h6{
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: -1vw;
-                    margin: 0 auto;
-                    color: #3C3C3C;
-                    font-size: 1.1vw;
-                    font-weight: 500;
-                    width: fit-content;
-                    letter-spacing: 0.1em;
-                    @include tablet{
-                        font-size: 3vw;
-                        bottom: -3vw;
+                        width:46.6vw;
                     }
                 }
             }
             .paraStyle{
                 .box{
-                    margin-bottom: pxConvertor(47);
+                    margin-bottom: pxConvertor(35);
+                    margin-top: 2.2vw;
                     .font_noto{
                         font-weight: 500;
                     }
@@ -1601,11 +1608,11 @@
         .right{
             display: flex;
             flex-direction: column;
-            align-items: center;
             flex-grow: 1;
             padding-top: pxConvertor(91);
             @include tablet{
                 width: 100%;
+                align-items: center;
             }
             form{
                 width: pxConvertor(600);
@@ -1713,13 +1720,16 @@
                     letter-spacing: 0.05em;
                     line-height: 1.8em;
                     @include tablet{
-                        font-size: pxConvertor2(19);
+                        font-size: 3vw;
                     }
                 }
            
             }
             & > :not(:last-child){
                 margin-bottom: pxConvertor(38);
+                @include tablet{
+                    margin-bottom: 1vw;
+                }
             }
             &::after{
                 @include tablet{
@@ -1729,8 +1739,8 @@
                     height: pxConvertor2(56.108);
                     background-color: #3C3C3C;
                     position: absolute;
-                    top: 15vw;
-                    right: -10vw;
+                    top: 14vw;
+    right: -7vw;
                 }
             }
         }
@@ -1770,7 +1780,7 @@
             a{
                 @include tablet{
                     position: absolute;
-                    right: 7vw;
+                    right: 5vw;
                     bottom: -33.5vw;
                 }
                 img{
@@ -1799,7 +1809,7 @@
                 align-items: center;
             }
             p{
-                color: #3C3C3C;
+                color: #3C3C3C !important;
                 letter-spacing: 0.05em;
                 line-height: 0;
                 @include tablet{
